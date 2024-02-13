@@ -3,7 +3,6 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-import plotly.graph_objects as go
 
 st.set_page_config(layout="wide",
                    page_title="Mapa Criminal Itapevi",
@@ -45,17 +44,16 @@ with st.container():
     
     
 with st.container():
-  
-  ("---")
-  st.markdown("## Grafico mapa sobre Segurança Pública de Itapevi")
-  st.write("""
-            Aqui nós criamos um gráfico mapa intuitiuvo e dinâmico.O nosso intuito é que quando as pessoas vejam esse grafico consigam visualizar as regiões onde acontecem os casos.\\
-            \\
-            Para visuzlizar as Informações no mapa basta filtrar no filtro a esquerda o caso que você deseja ver.\\
-            Esse gráfico está alimentado com dados da ultima versão de Dados Criminais divulgados pela SSP de 2023.
-            """)
+    ("---")
+    st.markdown("## Grafico mapa sobre Segurança Pública de Itapevi")
+    st.write("""
+             Aqui nós criamos um gráfico mapa intuitiuvo e dinâmico.O nosso intuito é que quando as pessoas vejam esse grafico consigam visualizar as regiões onde acontecem os casos.\\
+             \\
+             Para visuzlizar as Informações no mapa basta filtrar no filtro a esquerda o caso que você deseja ver.\\
+             Esse gráfico está alimentado com dados da ultima versão de Dados Criminais divulgados pela SSP de 2023.
+             """)
     
-  df = pd.read_excel("SSP_itapevi.xlsx")
+    df = pd.read_excel("Datasets\SSP_itapevi.xlsx")
 
     df['LATITUDE'] = pd.to_numeric(df['LATITUDE'], errors='coerce') 
     df['LONGITUDE'] = pd.to_numeric(df['LONGITUDE'], errors='coerce')
