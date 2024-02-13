@@ -255,12 +255,14 @@ def run():
       df_contagem = pd.DataFrame({"Rubrica": contagem_rubricas.index, "Quantidade": contagem_rubricas.values})
   
       fig = px.bar(df_contagem,
-               x="Rubrica",
-               y="Quantidade",
-               color='Rubrica',
-               title=f'Gráfico de Barras de Casos Agrupados por Rubrica - Bairro: {bairro_selecionado}')
-          
+             x="Rubrica",
+             y="Quantidade",
+             color='Rubrica',
+             text_auto="frequencia",
+             title=f'Gráfico de Barras de Casos Agrupados por Rubrica - Bairro: {bairro_selecionado}')
+      fig.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
       col3.plotly_chart(fig)
+    
       
 if __name__ == "__main__":
     run()
