@@ -259,7 +259,7 @@ def run():
              y="Quantidade",
              color='Rubrica',
              text_auto="frequencia",
-             title=f'Gráfico de Barras de Casos Agrupados por Rubrica - Bairro: {bairro_selecionado}')
+             title=f'Gráfico de Barras de Rubricas Agrupados por Bairro - Bairro: {bairro_selecionado}')
       fig.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
       col3.plotly_chart(fig)
     
