@@ -213,7 +213,7 @@ def run():
       mapa_itapevi.save("mapa.html")
       st.components.v1.html(open("mapa.html", "r", encoding="utf8").read(), height=600)
       
-    with st.container():
+  with st.container():
       ("---")
       A = st.markdown("## Análise Geral dos Bairros de Itapevi")
           
