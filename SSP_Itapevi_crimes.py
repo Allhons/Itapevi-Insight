@@ -10,7 +10,7 @@ LOGGER = get_logger(__name__)
 
 
 def run():
-  st.set_page_config(layout="wide",
+  st.set_page_config(layout="centered",
                    page_title="Mapa Criminal Itapevi",
                    page_icon="Itapevi_insights.ico")
 
@@ -219,7 +219,7 @@ def run():
           
       col1, col2 = st.columns(2)
       col3, col4 = st.columns(2)
-          
+      col5, col6 = st.columns(2)      
       ###############################################################################################################################
       contagem_bairros = df['BAIRRO'].value_counts().reset_index().head(30)
       contagem_bairros.columns = ['BAIRRO', 'frequencia']
@@ -233,6 +233,7 @@ def run():
       col1.plotly_chart(fig_bairros, use_container_width=True)
           
           ########################################################################################################################
+  with st.container():
       contagem_casos = df['RUBRICA'].value_counts().reset_index().head(15)
       contagem_casos.columns = ['RUBRICA', 'frequencia']
   
@@ -240,9 +241,9 @@ def run():
                               values="frequencia",
                               names="RUBRICA",
                               title="Quantidade de casos")
-      col2.plotly_chart(fig_quantidade_de_casos, use_container_width=True)
+      col3.plotly_chart(fig_quantidade_de_casos, use_container_width=True)
           ############################################################################################################################
-      
+  with st.container():    
       st.sidebar.header(" Filtro de Bairros Para o Gráfico de Casos Agrupados por Bairro")
       bairro_selecionado =st.sidebar.selectbox("BAIRRO",
                                       options=df["BAIRRO"].unique(),
@@ -261,7 +262,7 @@ def run():
              text_auto="frequencia",
              title=f'Gráfico de Barras de Rubricas Agrupados por Bairro - Bairro: {bairro_selecionado}')
       fig.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
-      col3.plotly_chart(fig)
+      col5.plotly_chart(fig)
     
       
 if __name__ == "__main__":
