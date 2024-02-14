@@ -34,8 +34,8 @@ def run():
   
       st.write("""Seja bem vindo(a) ao Itapevi Insights, aqui nos transformamos dados em informações!!\\
                Caso queira nos conhecer melhor acesse as nossas redes sociais:\\
-               ***Instagram***:\\
-               ***Twitter***:
+             ***Instagram***: [Itapevi Insights](https://www.instagram.com/itapevi.insights?igsh=dDAyMXdqN2tpZnJq)\\
+             ***Twitter***: [Itapevi Insights](https://x.com/itapevi_insight?s=11)
                """)
       
       st.sidebar.header(" Filtro de Ocorrência para o Gráfico Mapa")
