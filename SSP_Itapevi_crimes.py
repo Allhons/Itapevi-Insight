@@ -230,7 +230,7 @@ def run():
                           text_auto="frequencia",
                           title='TOP 30 bairros com mais ocorrências')
       fig_bairros.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
-      col1.plotly_chart(fig_bairros)
+      col1.plotly_chart(fig_bairros, use_container_width=True)
           
           ########################################################################################################################
   with st.container():
