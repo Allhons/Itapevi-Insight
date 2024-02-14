@@ -75,7 +75,7 @@ def run():
       df_filtro = df[df["NATUREZA_APURADA"].isin(ocorrencias)]
   
       mapa_itapevi = folium.Map(location=[-23.550792893857476, -46.93904384692045],
-                      zoom_start=14)
+                      zoom_start=13)
   
       Grupo_1 = folium.FeatureGroup("APREENSÃO DE ENTORPECENTES").add_to(mapa_itapevi)
       Grupo_2 = folium.FeatureGroup("FURTO - OUTROS").add_to(mapa_itapevi)
