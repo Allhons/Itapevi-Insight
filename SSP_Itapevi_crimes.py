@@ -10,7 +10,7 @@ LOGGER = get_logger(__name__)
 
 
 def run():
-  st.set_page_config(layout="centered",
+  st.set_page_config(layout="wide",
                    page_title="Mapa Criminal Itapevi",
                    page_icon="Itapevi_insights.ico")
 
