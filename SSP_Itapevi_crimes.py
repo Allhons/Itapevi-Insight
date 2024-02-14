@@ -230,7 +230,7 @@ def run():
                           text_auto="frequencia",
                           title='TOP 30 bairros com mais ocorrências')
       fig_bairros.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
-      col1.plotly_chart(fig_bairros, use_container_width=True)
+      col1.plotly_chart(fig_bairros)
           
           ########################################################################################################################
   with st.container():
@@ -241,7 +241,7 @@ def run():
                               values="frequencia",
                               names="RUBRICA",
                               title="Quantidade de casos")
-      col3.plotly_chart(fig_quantidade_de_casos, use_container_width=True)
+      col3.plotly_chart(fig_quantidade_de_casos)
           ############################################################################################################################
   with st.container():    
       st.sidebar.header(" Filtro de Bairros Para o Gráfico de Casos Agrupados por Bairro")
