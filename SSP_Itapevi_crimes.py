@@ -83,20 +83,21 @@ def run():
       Grupo_4 = folium.FeatureGroup("FURTO DE VEÍCULO").add_to(mapa_itapevi)
       Grupo_5 = folium.FeatureGroup("HOMICÍDIO CULPOSO POR ACIDENTE DE TRÂNSITO").add_to(mapa_itapevi)
       Grupo_6 = folium.FeatureGroup("HOMICÍDIO DOLOSO").add_to(mapa_itapevi)
-      Grupo_7 = folium.FeatureGroup("LESÃO CORPORAL CULPOSA - OUTRAS").add_to(mapa_itapevi)
-      Grupo_8 = folium.FeatureGroup("LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO").add_to(mapa_itapevi)
-      Grupo_9 = folium.FeatureGroup("LESÃO CORPORAL DOLOSA").add_to(mapa_itapevi)
-      Grupo_10 = folium.FeatureGroup("PORTE DE ARMA").add_to(mapa_itapevi)
-      Grupo_11 = folium.FeatureGroup("PORTE DE ENTORPECENTES").add_to(mapa_itapevi)
-      Grupo_12 = folium.FeatureGroup("ROUBO - OUTROS").add_to(mapa_itapevi)
-      Grupo_13 = folium.FeatureGroup("ROUBO DE CARGA").add_to(mapa_itapevi)
-      Grupo_14 = folium.FeatureGroup("ROUBO DE VEÍCULO").add_to(mapa_itapevi)
-      Grupo_15 = folium.FeatureGroup("TENTATIVA DE HOMICÍDIO").add_to(mapa_itapevi)
-      Grupo_16 = folium.FeatureGroup("TRÁFICO DE ENTORPECENTES").add_to(mapa_itapevi)
-      Grupo_17 = folium.FeatureGroup("LATROCÍNIO").add_to(mapa_itapevi)
+      Grupo_7 = folium.FeatureGroup("LATROCÍNIO").add_to(mapa_itapevi)
+      Grupo_8 = folium.FeatureGroup("LESÃO CORPORAL CULPOSA - OUTRAS").add_to(mapa_itapevi)
+      Grupo_9 = folium.FeatureGroup("LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO").add_to(mapa_itapevi)
+      Grupo_10 = folium.FeatureGroup("LESÃO CORPORAL DOLOSA").add_to(mapa_itapevi)
+      Grupo_11 = folium.FeatureGroup("PORTE DE ARMA").add_to(mapa_itapevi)
+      Grupo_12 = folium.FeatureGroup("PORTE DE ENTORPECENTES").add_to(mapa_itapevi)
+      Grupo_13 = folium.FeatureGroup("ROUBO - OUTROS").add_to(mapa_itapevi)
+      Grupo_14 = folium.FeatureGroup("ROUBO DE CARGA").add_to(mapa_itapevi)
+      Grupo_15 = folium.FeatureGroup("ROUBO DE VEÍCULO").add_to(mapa_itapevi)
+      Grupo_16 = folium.FeatureGroup("TENTATIVA DE HOMICÍDIO").add_to(mapa_itapevi)
+      Grupo_17 = folium.FeatureGroup("TRÁFICO DE ENTORPECENTES").add_to(mapa_itapevi)
   
   
       for bairro, lat, lon, caso in zip(df_filtro.BAIRRO, df_filtro.LATITUDE.values, df_filtro.LONGITUDE.values, df_filtro.NATUREZA_APURADA):
+          
   
           if caso == "APREENSÃO DE ENTORPECENTES":
               folium.Marker([lat, lon],
@@ -140,81 +141,82 @@ def run():
                           icon= folium.Icon(icon= "skull", prefix= 'fa', icon_color="red", color= "black")
                           ).add_to(Grupo_6)
               
+          if caso == "LATROCÍNIO":
+              folium.Marker([lat, lon],
+                             tooltip= "Clique Aqui!",
+                             popup= f"{caso}",
+                             icon= folium.Icon(icon= "gun", prefix= 'fa', icon_color="red", color= "black")
+                            ).add_to(Grupo_7)
+              
           if caso == "LESÃO CORPORAL CULPOSA - OUTRAS":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "person-harassing", prefix= 'fa', icon_color="beige", color= "black")
-                          ).add_to(Grupo_7)
+                          ).add_to(Grupo_8)
               
           if caso == "LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "car-burst", prefix= 'fa', icon_color="darkblue",  color= "beige")
-                          ).add_to(Grupo_8)
+                          ).add_to(Grupo_9)
               
           if caso == "LESÃO CORPORAL DOLOSA":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "person-harassing", prefix= 'fa', icon_color="beige",  color= "orange")
-                          ).add_to(Grupo_9)
+                          ).add_to(Grupo_10)
               
           if caso == "PORTE DE ARMA":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "gun", prefix= 'fa', icon_color="darkblue", color= "blue")
-                          ).add_to(Grupo_10)
+                          ).add_to(Grupo_11)
               
           if caso == "PORTE DE ENTORPECENTES":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "joint", prefix= 'fa', icon_color="darkgreen", color= "lightgreen")
-                          ).add_to(Grupo_11)
+                          ).add_to(Grupo_12)
           
           if caso == "ROUBO - OUTROS":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "people-robbery", prefix= 'fa', icon_color="white", color= "black")
-                          ).add_to(Grupo_12)
+                          ).add_to(Grupo_13)
               
           if caso == "ROUBO DE CARGA":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "truck", prefix= 'fa', icon_color="white", color= "black")
-                          ).add_to(Grupo_13)
+                          ).add_to(Grupo_14)
               
           if caso == "ROUBO DE VEÍCULO":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "car", prefix= 'fa', icon_color="white", color= "black")
-                          ).add_to(Grupo_14)
+                          ).add_to(Grupo_15)
               
           if caso == "TENTATIVA DE HOMICÍDIO":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "skull", prefix= 'fa', icon_color="black", color= "darkred")
-                          ).add_to(Grupo_15)
+                          ).add_to(Grupo_16)
   
           if caso == "TRÁFICO DE ENTORPECENTES":
               folium.Marker([lat, lon],
                           tooltip= "Clique Aqui!",
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "cannabis", prefix= 'fa', icon_color="darkgreen", color= "lightgreen")
-                          ).add_to(Grupo_16)
-          if caso == "LATROCÍNIO":
-              folium.Marker([lat, lon],
-                             tooltip= "Clique Aqui!",
-                             popup= f"{caso}",
-                             icon= folium.Icon(icon= "gun", prefix= 'fa', icon_color="red", color= "black")
-                            ).add_to(Grupo_17)
+                          ).add_to(Grupo_17)
   
       folium.LayerControl().add_to(mapa_itapevi)
       mapa_itapevi.save("mapa.html")
