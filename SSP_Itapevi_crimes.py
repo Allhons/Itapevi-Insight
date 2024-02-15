@@ -210,7 +210,7 @@ def run():
                           icon= folium.Icon(icon= "cannabis", prefix= 'fa', icon_color="darkgreen", color= "lightgreen")
                           ).add_to(Grupo_16)
           if caso == "LATROCÍNIO":
-              folilum.Marker([lat, lon],
+              folium.Marker([lat, lon],
                              tooltip= "Clique Aqui!",
                              popup= f"{caso}",
                              icon= folium.Icon(icon= "gun", prefix= 'fa', icon_color="red", color= "black")
