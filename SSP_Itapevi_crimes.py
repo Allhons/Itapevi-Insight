@@ -214,7 +214,7 @@ def run():
                              tooltip= "Clique Aqui!",
                              popup= f"{caso}",
                              icon= folium.Icon(icon= "gun", prefix= 'fa', icon_color="red", color= "black")
-                          ).add_to(Grupo_17)
+                            ).add_to(Grupo_17)
   
       folium.LayerControl().add_to(mapa_itapevi)
       mapa_itapevi.save("mapa.html")
