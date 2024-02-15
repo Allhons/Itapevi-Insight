@@ -256,7 +256,7 @@ def run():
       df_contagem = pd.DataFrame({"Natureza_Apurada": contagem_rubricas.index, "Quantidade": contagem_rubricas.values})
   
       fig = px.bar(df_contagem,
-             x="Rubrica",
+             x="Natureza_Apurada",
              y="Quantidade",
              color='Natureza_Apurada',
              text_auto="frequencia",
