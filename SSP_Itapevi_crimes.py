@@ -44,19 +44,21 @@ def run():
       ("---")
       st.markdown("## Sumário")
       st.write("""
-               1° - Grafico mapa sobre a Segurança publica de Itapevi.\\
+               1° - Grafico mapa sobre a Segurança publica de Itapevi em 2023.\\
                2° - Análise geral dos bairros de Itapevi.
                """)
       
       
   with st.container():
       ("---")
-      st.markdown("## Grafico mapa sobre Segurança Pública de Itapevi")
+      st.markdown("## Grafico mapa sobre Segurança Pública de Itapevi em 2023")
       st.write("""
                Aqui nós criamos um gráfico mapa intuitiuvo e dinâmico.O nosso intuito é que quando as pessoas vejam esse grafico consigam visualizar as regiões onde acontecem os casos.\\
                \\
                Para visuzlizar as Informações no mapa basta filtrar no filtro a esquerda o caso que você deseja ver.\\
-               Esse gráfico está alimentado com dados da ultima versão de Dados Criminais divulgados pela SSP de 2023.
+               Esse gráfico está alimentado com dados da ultima versão de Dados Criminais divulgados pela SSP de 2023.\\
+               \\
+               OBS: Para este gráfico foi desconsiderado casos sensíveis como estrupo, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!
                """)
       
       df = pd.read_excel("SSP_itapevi.xlsx")
@@ -225,6 +227,7 @@ def run():
   with st.container():
       ("---")
       A = st.markdown("## Análise Geral dos Bairros de Itapevi")
+      st.write("OBS: Para este gráfico foi desconsiderado casos sensíveis como estrupo, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!")
           
       col1, col2 = st.columns(2)
       col3, col4 = st.columns(2)
@@ -237,7 +240,7 @@ def run():
                           x='BAIRRO',
                           y='frequencia',
                           text_auto="frequencia",
-                          title='TOP 30 bairros com mais ocorrências')
+                          title='TOP 30 bairros com mais ocorrências em 2023')
       fig_bairros.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
       col1.plotly_chart(fig_bairros)
           
@@ -249,7 +252,7 @@ def run():
       fig_quantidade_de_casos = px.pie(contagem_casos,
                               values="frequencia",
                               names="RUBRICA",
-                              title="Quantidade de casos")
+                              title="Quantidade de casos em 2023")
       col3.plotly_chart(fig_quantidade_de_casos)
           ############################################################################################################################
   with st.container():    
@@ -269,7 +272,7 @@ def run():
              y="Quantidade",
              color='Natureza_Apurada',
              text_auto="frequencia",
-             title=f'Gráfico de Barras de Rubricas Agrupados por Bairro - Bairro: {bairro_selecionado}')
+             title=f'Gráfico de Barras de Rubricas Agrupados por Bairro em 2023 - Bairro: {bairro_selecionado}')
       fig.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
       col5.plotly_chart(fig)
     
