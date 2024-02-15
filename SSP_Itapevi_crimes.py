@@ -44,14 +44,14 @@ def run():
       ("---")
       st.markdown("## Sumário")
       st.write("""
-               1° - Grafico mapa sobre a Segurança publica de Itapevi em 2023.\\
+               1° - Gráfico mapa sobre a Segurança publica de Itapevi em 2023.\\
                2° - Análise geral dos bairros de Itapevi.
                """)
       
       
   with st.container():
       ("---")
-      st.markdown("## Grafico mapa sobre Segurança Pública de Itapevi em 2023")
+      st.markdown("## Gráfico mapa sobre Segurança Pública de Itapevi em 2023")
       st.write("""
                Aqui nós criamos um gráfico mapa intuitiuvo e dinâmico.O nosso intuito é que quando as pessoas vejam esse grafico consigam visualizar as regiões onde acontecem os casos.\\
                \\
