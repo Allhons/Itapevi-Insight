@@ -93,6 +93,7 @@ def run():
       Grupo_14 = folium.FeatureGroup("ROUBO DE VEÍCULO").add_to(mapa_itapevi)
       Grupo_15 = folium.FeatureGroup("TENTATIVA DE HOMICÍDIO").add_to(mapa_itapevi)
       Grupo_16 = folium.FeatureGroup("TRÁFICO DE ENTORPECENTES").add_to(mapa_itapevi)
+      Grupo_17 = folium.FeatureGroup("LATROCÍNIO").add_to(mapa_itapevi)
   
   
       for bairro, lat, lon, caso in zip(df_filtro.BAIRRO, df_filtro.LATITUDE.values, df_filtro.LONGITUDE.values, df_filtro.NATUREZA_APURADA):
@@ -208,6 +209,12 @@ def run():
                           popup= f"{caso}",
                           icon= folium.Icon(icon= "cannabis", prefix= 'fa', icon_color="darkgreen", color= "lightgreen")
                           ).add_to(Grupo_16)
+          if caso == "LATROCÍNIO":
+              folilum.Marker([lat, lon],
+                             tooltip= "Clique Aqui!",
+                             popup= f"{caso}",
+                             icon= folium.Icon(icon= "gun", prefix= 'fa', icon_color="red", color= "black")
+                          ).add_to(Grupo_17)
   
       folium.LayerControl().add_to(mapa_itapevi)
       mapa_itapevi.save("mapa.html")
