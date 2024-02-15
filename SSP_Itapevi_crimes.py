@@ -227,7 +227,7 @@ def run():
   with st.container():
       ("---")
       A = st.markdown("## Análise Geral dos Bairros de Itapevi")
-      st.write("OBS: Para este gráfico foi desconsiderado casos sensíveis como estrupo, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!")
+      st.write("OBS: Para os gráficos a seguir também foram desconsiderado casos sensíveis como estrupo, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!")
           
       col1, col2 = st.columns(2)
       col3, col4 = st.columns(2)
