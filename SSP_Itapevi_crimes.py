@@ -251,14 +251,14 @@ def run():
                                       index=None)
       
       df_bairros = df[df["BAIRRO"] == bairro_selecionado]
-      contagem_rubricas = df_bairros["RUBRICA"].value_counts()
+      contagem_rubricas = df_bairros["NATUREZA_APURADA"].value_counts()
           
-      df_contagem = pd.DataFrame({"RUBRICA": contagem_rubricas.index, "Quantidade": contagem_rubricas.values})
+      df_contagem = pd.DataFrame({"Natureza_Apurada": contagem_rubricas.index, "Quantidade": contagem_rubricas.values})
   
       fig = px.bar(df_contagem,
              x="Rubrica",
              y="Quantidade",
-             color='RUBRICA',
+             color='Natureza_Apurada',
              text_auto="frequencia",
              title=f'Gráfico de Barras de Rubricas Agrupados por Bairro - Bairro: {bairro_selecionado}')
       fig.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
