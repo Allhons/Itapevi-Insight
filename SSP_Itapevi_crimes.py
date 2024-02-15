@@ -58,7 +58,7 @@ def run():
                Para visuzlizar as Informações no mapa basta filtrar no filtro a esquerda o caso que você deseja ver.\\
                Esse gráfico está alimentado com dados da ultima versão de Dados Criminais divulgados pela SSP de 2023.\\
                \\
-               OBS: Para este gráfico foi desconsiderado casos sensíveis como estrupo, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!
+               OBS: Para este gráfico foi desconsiderado casos sensíveis como estupro, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!
                """)
       
       df = pd.read_excel("SSP_itapevi.xlsx")
@@ -227,7 +227,7 @@ def run():
   with st.container():
       ("---")
       A = st.markdown("## Análise Geral dos Bairros de Itapevi")
-      st.write("OBS: Para os gráficos a seguir também foram desconsiderado casos sensíveis como estrupo, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!")
+      st.write("OBS: Para os gráficos a seguir também foram desconsiderado casos sensíveis como estupro, pois eles estavam protegidos pela LGPD(LEI GERAL DE PROTEÇÃO DE DADOS)!")
           
       col1, col2 = st.columns(2)
       col3, col4 = st.columns(2)
