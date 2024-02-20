@@ -58,7 +58,7 @@ def run():
                 Esse gráfico está alimentado com dados da ultima versão de Dados Criminais divulgados pela SSP de 2023.
                 """)
         
-        df = pd.read_excel("Datasets\SSP_itapevi.xlsx")
+        df = pd.read_excel("SSP_itapevi.xlsx")
 
         df['LATITUDE'] = pd.to_numeric(df['LATITUDE'], errors='coerce') 
         df['LONGITUDE'] = pd.to_numeric(df['LONGITUDE'], errors='coerce')
