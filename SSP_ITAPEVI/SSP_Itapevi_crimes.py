@@ -227,6 +227,7 @@ def run():
             
         col1, col2 = st.columns(2)
         col3, col4 = st.columns(2)
+        col5, col6 =st.columns(2)
             
         ###############################################################################################################################
         contagem_bairros = df['BAIRRO'].value_counts().reset_index().head(30)
@@ -248,7 +249,7 @@ def run():
                                 values="frequencia",
                                 names="RUBRICA",
                                 title="Estado Civil")
-        col2.plotly_chart(fig_estado_civil, use_container_width=True)
+        col3.plotly_chart(fig_estado_civil, use_container_width=True)
             ############################################################################################################################
         
         st.sidebar.header(" Filtro de Bairros Para o Gráfico de Casos Agrupados por Bairro")
@@ -269,7 +270,7 @@ def run():
                 text_auto="frequencia",
                 title=f'Gráfico de Barras de Casos Agrupados por Rubrica - Bairro: {bairro_selecionado}')
         fig.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
-        col3.plotly_chart(fig)
+        col5.plotly_chart(fig)
 
 if __name__ == "__main__":
     run()
