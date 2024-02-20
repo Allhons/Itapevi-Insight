@@ -12,7 +12,7 @@ LOGGER = get_logger(__name__)
 def run():
   st.set_page_config(layout="wide",
                    page_title="Análise de Dados do Enem 2022",
-                   page_icon="Itapevi_insights.ico")
+                   page_icon="ENEM_ITAPEVI_2022/Itapevi_insights.ico")
 
   st.sidebar.image("ENEM_ITAPEVI_2022/Logo_sem_nada.png", caption="")
 
