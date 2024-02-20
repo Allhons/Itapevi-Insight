@@ -13,7 +13,7 @@ def run():
                    page_title="Mapa Criminal Itapevi",
                    page_icon="SSP_ITAPEVI/Itapevi_insights.ico")
 
-    st.sidebar.image("SSP_ITAPEVI/Logo_sem_nada.png", caption="")
+    st.sidebar.image("ENEM_ITAPEVI_2022/Logo_sem_nada.png", caption="")
 
     st.markdown("""
     <style>
