@@ -11,9 +11,9 @@ LOGGER = get_logger(__name__)
 def run():
     st.set_page_config(layout="wide",
                    page_title="Mapa Criminal Itapevi",
-                   page_icon="Itapevi_insights.ico")
+                   page_icon="SSP_ITAPEVI/Itapevi_insights.ico")
 
-    st.sidebar.image("Logo_sem_nada.png", caption="")
+    st.sidebar.image("SSP_ITAPEVI/Logo_sem_nada.png", caption="")
 
     st.markdown("""
     <style>
@@ -58,7 +58,7 @@ def run():
                 Esse gráfico está alimentado com dados da ultima versão de Dados Criminais divulgados pela SSP de 2023.
                 """)
         
-        df = pd.read_excel("SSP_itapevi.xlsx")
+        df = pd.read_excel("SSP_ITAPEVI/SSP_itapevi.xlsx")
 
         df['LATITUDE'] = pd.to_numeric(df['LATITUDE'], errors='coerce') 
         df['LONGITUDE'] = pd.to_numeric(df['LONGITUDE'], errors='coerce')
