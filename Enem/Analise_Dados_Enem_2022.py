@@ -133,8 +133,8 @@ with st.container():
       'Q003':Q003,
       'Q004':Q004}
 
-  df = pd.read_excel('Datasets\Enem 2022 Grupo.xlsx')
-  Itapevi_df = pd.read_excel('Datasets\Itapevi enem 2022.xlsx')
+  df = pd.read_excel('Itapevi-Insight/Datasets/Itapevi enem 2022.xlsx')
+  Itapevi_df = pd.read_excel('Itapevi-Insight/Datasets/Itapevi enem 2022.xlsx')
 
   df_presentes = df.loc[(df['TP_PRESENCA_CN']  == 1) & (df['TP_PRESENCA_CH'] == 1)]
   df_presentes_itapevi = Itapevi_df.loc[(df['TP_PRESENCA_CN']  == 1) & (Itapevi_df['TP_PRESENCA_CH'] == 1)]
