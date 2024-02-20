@@ -14,7 +14,7 @@ def run():
                    page_title="Análise de Dados do Enem 2022",
                    page_icon="Itapevi_insights.ico")
 
-  st.sidebar.image("Logo_sem_nada.png", caption="")
+  st.sidebar.image("ENEM_ITAPEVI_2022/Logo_sem_nada.png", caption="")
 
   st.markdown("""
   <style>
