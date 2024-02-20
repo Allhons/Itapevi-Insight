@@ -245,12 +245,13 @@ def run():
         contagem_casos = df['RUBRICA'].value_counts().reset_index().head(15)
         contagem_casos.columns = ['RUBRICA', 'frequencia']
 
-        fig_estado_civil = px.bar(contagem_casos,
-                                x="RUBRICA"
+        fig_casos = px.bar(contagem_casos,
+                                x="RUBRICA",
                                 y="frequencia",
                                 text_auto="frequencia",
                                 title="Total de casos por rubrica")
-        col3.plotly_chart(fig_estado_civil, use_container_width=True)
+        fig_casos.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
+        col3.plotly_chart(fig_casos, use_container_width=True)
             ############################################################################################################################
         
         st.sidebar.header(" Filtro de Bairros Para o Gráfico de Casos Agrupados por Bairro")
