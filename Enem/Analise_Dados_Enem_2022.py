@@ -137,7 +137,7 @@ def run():
         'Q003':Q003,
         'Q004':Q004}
 
-    df = pd.read_excel('Enem 2022 Grupo.xlsx')
+    df = pd.read_excel('Enem 2022 Grupo.xlsx',encoding="ISO-8859-1")
     Itapevi_df = pd.read_excel('Itapevi enem 2022.xlsx')
 
     df_presentes = df.loc[(df['TP_PRESENCA_CN']  == 1) & (df['TP_PRESENCA_CH'] == 1)]
