@@ -245,10 +245,12 @@ def run():
         contagem_casos = df['RUBRICA'].value_counts().reset_index().head(15)
         contagem_casos.columns = ['RUBRICA', 'frequencia']
 
-        fig_casos = px.pie(contagem_casos,
-                            values="frequencia",
-                            names="RUBRICA",
+        fig_casos = px.bar(contagem_casos,
+                            x="RUBRICA",
+                            y="frequencia",
+                            text_auto="frequencia"
                             title="Total casos por Rubrica")
+        fig_casos.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
         col3.plotly_chart(fig_casos, use_container_width=True)
             ############################################################################################################################
         
