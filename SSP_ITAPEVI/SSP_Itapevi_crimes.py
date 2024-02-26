@@ -249,7 +249,7 @@ def run():
                             x="RUBRICA",
                             y="frequencia",
                             text_auto="frequencia",
-                            title="Total casos por Rubrica")
+                            title="Top 5 casos por Rubrica")
         fig_casos.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
         col3.plotly_chart(fig_casos, use_container_width=True)
             ############################################################################################################################
