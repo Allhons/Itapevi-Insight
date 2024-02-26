@@ -242,7 +242,7 @@ def run():
         col1.plotly_chart(fig_bairros, use_container_width=True)
             
             ########################################################################################################################
-        contagem_casos = df['RUBRICA'].value_counts().reset_index().head(15)
+        contagem_casos = df['RUBRICA'].value_counts().reset_index().head(5)
         contagem_casos.columns = ['RUBRICA', 'frequencia']
 
         fig_casos = px.bar(contagem_casos,
