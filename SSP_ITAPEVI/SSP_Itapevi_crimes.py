@@ -248,7 +248,7 @@ def run():
         fig_casos = px.bar(contagem_casos,
                             x="RUBRICA",
                             y="frequencia",
-                            text_auto="frequencia"
+                            text_auto="frequencia",
                             title="Total casos por Rubrica")
         fig_casos.update_traces ( textfont_size = 12 ,  textangle = 0 ,  textposition = "outside" ,  cliponaxis = False )
         col3.plotly_chart(fig_casos, use_container_width=True)
